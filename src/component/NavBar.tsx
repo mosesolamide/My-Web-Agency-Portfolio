@@ -35,7 +35,7 @@ export default function NavBar():JSX.Element{
 
                 <div 
                     className={`${showMenu && tabletSize? 'absolute top-0 left-0 w-full flex flex-col'
-                    : 'hidden'} md:flex items-center justify-center bg-[#020617]/60 backdrop-blur-lg mt-0 h-screen md:h-0`}
+                    : 'hidden'} md:flex items-center justify-center bg-[#020617] mt-0 h-screen md:h-0`}
                  >
                     <button 
                         className='mb-10 cursor-pointer md:hidden'
