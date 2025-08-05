@@ -1,6 +1,6 @@
 import type { JSX } from 'react'
 import { useState, useEffect } from 'react'
-import { Link as ScrollLink } from "react-scroll"
+import { NavLink, Link as GetStarted } from 'react-router-dom'
 import { TiThMenuOutline } from "react-icons/ti"
 import { MdOutlineCancel } from "react-icons/md"
 // import { CiTwitter, CiInstagram } from "react-icons/ci"
@@ -17,119 +17,116 @@ export default function NavBar():JSX.Element{
             setWindowWidth(window.innerWidth)
         }
 
-            window.addEventListener('resize', handleResize)
+        window.addEventListener('resize', handleResize)
 
         // Cleanup function to remove event listener
         return () => {
             window.removeEventListener('resize', handleResize)
         }
     },[])
-
-
     
     return(
-        <header className='relative'>
-            <nav className='text-white flex py-8 px-4 md:items-center justify-between md:justify-around'>
+        <header className='relative h-24'>
+            <nav 
+                className='text-white flex py-8 px-4 md:items-center
+                justify-between md:justify-around border-b-1 border-white bg-[#020617] fixed w-full h-24 z-50'
+            >
 
                 <div>
                     <h1 className='font-bold text-2xl'>MoWebDev</h1>
                 </div>
 
                 <div 
-                    className={`${showMenu && tabletSize? 'absolute top-0 left-0 w-full flex flex-col': 'hidden'} md:flex items-center justify-center
-                     bg-[#020617] md:bg-transparent py-5 mt-0 h-screen md:h-0`}
+                    className={`${showMenu && tabletSize? 'absolute top-0 left-0 w-full flex flex-col'
+                    : 'hidden'} md:flex items-center justify-center bg-[#020617] mt-0 h-screen md:h-0`}
                  >
-                    <div 
+                    <button 
                         className='mb-10 cursor-pointer md:hidden'
                         onClick={() => setShowMenu(false)}
+                        aria-label='Close Menu'
+                        style={{ outlineOffset: '4px' }}
                     >
-                        <MdOutlineCancel size={30}/>
-                    </div>
-                    <ul className='flex flex-col md:flex-row gap-4 text-2xl md:text-sm lg:text-lg font-medium'>
+                        <MdOutlineCancel 
+                            aria-hidden={true} 
+                            size={30}
+                            className='text-white'
+                        />
+                    </button>
+                    <ul className='flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8 text-2xl md:text-sm lg:text-lg font-medium'>
                         <li>
-                            <ScrollLink
-                                className=''
-                                to="home"
-                                spy={true}
-                                smooth={true}
-                                duration={500}
+                            <NavLink
+                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
+                                to="/"
                             >
                                 Home
-                            </ScrollLink>
+                            </NavLink>
                         </li>
                         <li>
-                            <ScrollLink
-                                className=''
+                            <NavLink
+                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
                                 to="about"
-                                spy={true}
-                                smooth={true}
-                                duration={500}
                             >
                                 Services
-                            </ScrollLink>
+                            </NavLink>
                         </li>
                         <li>
-                            <ScrollLink
-                                className=''
+                            <NavLink
+                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
                                 to="project"
-                                spy={true}
-                                smooth={true}
-                                duration={500}
                             >
                                 Project
-                            </ScrollLink>
+                            </NavLink>
                         </li>
                         <li>
-                            <ScrollLink
-                                className=''
+                            <NavLink
+                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
                                 to="about"
-                                spy={true}
-                                smooth={true}
-                                duration={500}
                             >
                                 About Us
-                            </ScrollLink>
+                            </NavLink>
                         </li>
                         <li>
-                            <ScrollLink
-                                className=''
+                            <NavLink
+                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
                                 to="about"
-                                spy={true}
-                                smooth={true}
-                                duration={500}
                             >
                                 Blog
-                            </ScrollLink>
+                            </NavLink>
                         </li>
                         <li>
-                            <ScrollLink
-                                className=''
+                            <NavLink
+                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
                                 to="contact"
-                                spy={true}
-                                smooth={true}
-                                duration={500}
                             >
                                 Contact Us
-                            </ScrollLink>
+                            </NavLink>
                         </li>
                     </ul>
                 </div>
 
                 <div className='hidden sm:flex'>
-                    <button
-                        className='bg-[#01040E] font-medium cursor-pointer
+                    <GetStarted
+                        to="/get-started"
+                        className=' font-medium cursor-pointer
                          px-8 md:px-4 py-2 md:py-2 border-[1px] border-white rounded-full'
+                        aria-label='Get started'
+                         
                     >
                         Get Started
-                    </button>
+                    </GetStarted>
                 </div>
 
-                <div 
-                    className='cursor-pointer md:hidden'
+                <button 
+                    className='cursor-pointer md:hidden '
                     onClick={() => setShowMenu( prev => !prev)}
+                    aria-label={showMenu ? "Close Menu" : "Open Menu"}
+                    aria-expanded={showMenu}
                 >
-                    <TiThMenuOutline size={30} />
-                </div>
+                    <TiThMenuOutline
+                         size={30}
+                         className='text-current'
+                     />
+                </button>
 
             </nav>
         </header>
