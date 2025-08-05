@@ -1,5 +1,5 @@
 import type { JSX } from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Link as ScrollLink } from "react-scroll"
 import { TiThMenuOutline } from "react-icons/ti"
 import { MdOutlineCancel } from "react-icons/md"
@@ -9,9 +9,26 @@ import { MdOutlineCancel } from "react-icons/md"
 
 export default function NavBar():JSX.Element{
     const [showMenu, setShowMenu] = useState<boolean>(false)
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+    const tabletSize:boolean = windowWidth <= 768
+    
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth)
+        }
+
+            window.addEventListener('resize', handleResize)
+
+        // Cleanup function to remove event listener
+        return () => {
+            window.removeEventListener('resize', handleResize)
+        }
+    },[])
+
+
     
     return(
-        <header>
+        <header className='relative'>
             <nav className='text-white flex py-8 px-4 md:items-center justify-between md:justify-around'>
 
                 <div>
@@ -19,7 +36,7 @@ export default function NavBar():JSX.Element{
                 </div>
 
                 <div 
-                    className={`${showMenu? 'absolute top-0 left-0 w-full flex flex-col': 'hidden'} md:flex items-center justify-center
+                    className={`${showMenu && tabletSize? 'absolute top-0 left-0 w-full flex flex-col': 'hidden'} md:flex items-center justify-center
                      bg-[#020617] md:bg-transparent py-5 mt-0 h-screen md:h-0`}
                  >
                     <div 
