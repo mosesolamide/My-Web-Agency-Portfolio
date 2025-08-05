@@ -26,7 +26,7 @@ export default function NavBar():JSX.Element{
         <header className='relative h-24'>
             <nav 
                 className='text-white flex py-8 px-4 md:items-center
-                justify-between md:justify-around border-b-1 border-white bg-[#020617] fixed w-full h-24 z-50'
+                justify-between md:justify-around border-b-1 border-white/30 bg-[#020617] fixed w-full h-24 z-50'
             >
 
                 <div>
@@ -120,7 +120,7 @@ export default function NavBar():JSX.Element{
                     <GetStarted
                         to="/get-started"
                         className=' font-medium cursor-pointer
-                         px-8 md:px-4 py-2 md:py-2 border-[1px] border-white rounded-full'
+                         px-8 md:px-4 py-2 md:py-2 border-[1px] border-white/20 rounded-full'
                         aria-label='Get started'
                          
                     >

@@ -1,7 +1,7 @@
 import type { JSX } from 'react'
 import { CiTwitter, CiInstagram } from "react-icons/ci"
 import { PiTiktokLogoThin } from "react-icons/pi"
-import { VscGithubAlt } from "react-icons/vsc"
+// import { VscGithubAlt } from "react-icons/vsc"
 import { Link } from 'react-router-dom'
 
 export default function Footer():JSX.Element{
@@ -77,14 +77,14 @@ export default function Footer():JSX.Element{
                                 <PiTiktokLogoThin size={25}/>
                             </a>
                         </li>
-                        <li
+                        {/* <li
                             className='hover:bg-[#1C1F2F] w-10 h-10 rounded-full flex items-center
                             justify-center transition-colors duration-500'
                         >
                             <a href="" >
                                 <VscGithubAlt size={25}/>
                             </a>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>
