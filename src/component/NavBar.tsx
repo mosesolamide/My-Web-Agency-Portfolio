@@ -49,10 +49,15 @@ export default function NavBar():JSX.Element{
                             className='text-white'
                         />
                     </button>
-                    <ul className='flex flex-col md:flex-row gap-4 md:gap-6 lg:gap-8 text-2xl md:text-sm lg:text-lg font-medium'>
+                    <ul 
+                        className='flex flex-col md:flex-row gap-4 md:gap-6
+                        lg:gap-8 text-2xl md:text-sm lg:text-lg font-medium'
+                    >
                         <li>
                             <NavLink
-                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
+                                className={({ isActive }) => isActive?
+                                 'bg-[#1C1F2F] text-purple-300 px-4 py-2 rounded-full'
+                                 :'hover:text-purple-300 transition-colors'}
                                 to="/"
                             >
                                 Home
@@ -60,7 +65,9 @@ export default function NavBar():JSX.Element{
                         </li>
                         <li>
                             <NavLink
-                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
+                                className={({ isActive }) => isActive?
+                                 'bg-[#1C1F2F] px-4 py-2 rounded-full'
+                                 :'hover:text-purple-300 transition-colors'}
                                 to="about"
                             >
                                 Services
@@ -68,7 +75,9 @@ export default function NavBar():JSX.Element{
                         </li>
                         <li>
                             <NavLink
-                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
+                                className={({ isActive }) => isActive?
+                                 'bg-[#1C1F2F] px-4 py-2 rounded-full'
+                                 :'hover:text-purple-300 transition-colors'}
                                 to="project"
                             >
                                 Project
@@ -76,7 +85,9 @@ export default function NavBar():JSX.Element{
                         </li>
                         <li>
                             <NavLink
-                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
+                                className={({ isActive }) => isActive?
+                                 'bg-[#1C1F2F] px-4 py-2 rounded-full'
+                                 :'hover:text-purple-300 transition-colors'}
                                 to="about"
                             >
                                 About Us
@@ -84,7 +95,9 @@ export default function NavBar():JSX.Element{
                         </li>
                         <li>
                             <NavLink
-                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
+                                className={({ isActive }) => isActive?
+                                 'bg-[#1C1F2F] px-4 py-2 rounded-full'
+                                 :'hover:text-purple-300 transition-colors'}
                                 to="about"
                             >
                                 Blog
@@ -92,7 +105,9 @@ export default function NavBar():JSX.Element{
                         </li>
                         <li>
                             <NavLink
-                                className={({ isActive }) => isActive? 'bg-[#1C1F2F] px-4 py-2 rounded-full':''}
+                                className={({ isActive }) => isActive?
+                                 'bg-[#1C1F2F] px-4 py-2 rounded-full'
+                                 :'hover:text-purple-300 transition-colors'}
                                 to="contact"
                             >
                                 Contact Us
