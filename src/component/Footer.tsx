@@ -42,7 +42,7 @@ export default function Footer():JSX.Element{
 
                 {/* Column 3: Contact */}
                 <div className="space-y-4">
-                    <h3 className="font-medium uppercase text-sm tracking-wider">Contact</h3>
+                    <h3 className="font-medium uppercase text-sm tracking-wider">Contact Us</h3>
                     <address className="not-italic space-y-2">
                         <p className="text-white/60">08167893167</p>
                         <p className="text-white/60">olamidemoses132@gmail.com</p>
@@ -51,7 +51,7 @@ export default function Footer():JSX.Element{
 
                 {/* Column 4: Social */}
                 <div className="space-y-4">
-                    <h3 className="font-medium text-sm tracking-wider">Follow</h3>
+                    <h3 className="font-medium text-sm tracking-wider">Follow Us</h3>
                     <ul className='flex gap-2'>
                         <li 
                             className='hover:bg-[#1C1F2F] w-10 h-10 rounded-full flex items-center

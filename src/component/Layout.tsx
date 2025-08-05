@@ -8,7 +8,7 @@ export default function Layout():JSX.Element{
         <div className="min-h-screen w-full bg-[#020617] relative">
             {/* Magenta Orb Grid Background */}
             <div
-                className="absolute inset-0 z-0"
+                className="fixed inset-0 z-0"
                 style={{
                 background: "#020617",
                 backgroundImage: `
