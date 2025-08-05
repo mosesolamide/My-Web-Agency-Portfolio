@@ -4,7 +4,12 @@ export default function Home(): JSX.Element {
     return (
         <div>
             <div className='max-w-6xl'>
-                <h1 className='text-5xl md:text-6xl text-center md:text-start font-medium leading-16 md:leading-20 md:w-2xl'>We build professional websites that:</h1>
+                <h1 
+                    className='text-4xl sm:text-5xl md:text-6xl font-semibold text-center md:text-start 
+                    md:font-medium leading-16 md:leading-20 md:w-2xl'
+                    >
+                        We build professional websites that:
+                </h1>
                 <div className='mt-6 flex flex-col lg:flex-row gap-4'>
                     <div 
                         className='border border-white/20 rounded-full 
