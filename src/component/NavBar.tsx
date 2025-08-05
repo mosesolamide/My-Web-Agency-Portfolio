@@ -3,9 +3,6 @@ import { useState, useEffect } from 'react'
 import { NavLink, Link as GetStarted } from 'react-router-dom'
 import { TiThMenuOutline } from "react-icons/ti"
 import { MdOutlineCancel } from "react-icons/md"
-// import { CiTwitter, CiInstagram } from "react-icons/ci"
-// import { PiTiktokLogoThin } from "react-icons/pi"
-// import { VscGithubAlt } from "react-icons/vsc"
 
 export default function NavBar():JSX.Element{
     const [showMenu, setShowMenu] = useState<boolean>(false)
@@ -133,37 +130,3 @@ export default function NavBar():JSX.Element{
     )
 }
 // bg-[#01030B]
-                    // <ul className='flex gap-2'>
-                    //     <li 
-                    //         className='hover:bg-[#1C1F2F] w-10 h-10 rounded-full flex items-center
-                    //         justify-center transition-colors duration-500'
-                    //     >
-                    //         <a href="">
-                    //             <CiTwitter size={25}/>
-                    //         </a>
-                    //     </li>
-                    //     <li
-                    //         className='hover:bg-[#1C1F2F] w-10 h-10 rounded-full flex items-center
-                    //         justify-center transition-colors duration-500'
-                    //     >
-                    //         <a href="">
-                    //             <CiInstagram size={25}/>
-                    //         </a>
-                    //     </li>
-                    //     <li 
-                    //         className='hover:bg-[#1C1F2F] w-10 h-10 rounded-full flex items-center
-                    //         justify-center transition-colors duration-500'
-                    //     >
-                    //         <a href="">
-                    //             <PiTiktokLogoThin size={25}/>
-                    //         </a>
-                    //     </li>
-                    //     <li
-                    //         className='hover:bg-[#1C1F2F] w-10 h-10 rounded-full flex items-center
-                    //         justify-center transition-colors duration-500'
-                    //     >
-                    //         <a href="" >
-                    //             <VscGithubAlt size={25}/>
-                    //         </a>
-                    //     </li>
-                    // </ul>
