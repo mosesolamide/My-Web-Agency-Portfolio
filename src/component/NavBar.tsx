@@ -8,8 +8,7 @@ import { MdOutlineCancel } from "react-icons/md"
 // import { VscGithubAlt } from "react-icons/vsc"
 
 export default function NavBar():JSX.Element{
-    const [showMenu, setShowMenu] = useState<boolean>(true)
-    console.log(showMenu)
+    const [showMenu, setShowMenu] = useState<boolean>(false)
     
     return(
         <header>
@@ -20,10 +19,13 @@ export default function NavBar():JSX.Element{
                 </div>
 
                 <div 
-                    className='hidden md:flex items-center justify-center
-                     bg-[#020617] md:bg-transparent py-5 mt-0 h-screen md:h-0'
+                    className={`${showMenu? 'absolute top-0 left-0 w-full flex flex-col': 'hidden'} md:flex items-center justify-center
+                     bg-[#020617] md:bg-transparent py-5 mt-0 h-screen md:h-0`}
                  >
-                    <div className='mb-10 cursor-pointer md:hidden'>
+                    <div 
+                        className='mb-10 cursor-pointer md:hidden'
+                        onClick={() => setShowMenu(false)}
+                    >
                         <MdOutlineCancel size={30}/>
                     </div>
                     <ul className='flex flex-col md:flex-row gap-4 text-2xl md:text-sm lg:text-lg font-medium'>
@@ -107,7 +109,7 @@ export default function NavBar():JSX.Element{
 
                 <div 
                     className='cursor-pointer md:hidden'
-                    onClick={() => setShowMenu(false)}
+                    onClick={() => setShowMenu( prev => !prev)}
                 >
                     <TiThMenuOutline size={30} />
                 </div>
