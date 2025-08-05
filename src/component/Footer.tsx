@@ -2,10 +2,16 @@ import type { JSX } from 'react'
 import { CiTwitter, CiInstagram } from "react-icons/ci"
 import { PiTiktokLogoThin } from "react-icons/pi"
 import { VscGithubAlt } from "react-icons/vsc"
+import { Link } from 'react-router-dom'
 
 export default function Footer():JSX.Element{
     return(
-        <footer className="text-white bg-[#020617] border-t border-white/20 w-full max-w-[1200px] mx-auto min-h-[350px] rounded-t-3xl px-6 py-12 md:px-8 md:py-16">
+        <footer 
+            className="text-white bg-[#020617] border-t
+          border-white/20 w-full max-w-[1200px] mx-auto min-h-[350px]
+            rounded-t-3xl px-6 py-12 md:px-8 md:py-16"
+
+         >
             {/* Content Grid */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-[1100px] mx-auto">
                 
@@ -23,9 +29,12 @@ export default function Footer():JSX.Element{
                     <ul className="space-y-2">
                         {['Home', 'Services', 'Projects', 'About'].map((item) => (
                         <li key={item}>
-                            <a href="#" className="hover:text-purple-300 transition-colors">
+                            <Link 
+                                to='' 
+                                className="hover:text-purple-300 transition-colors"
+                            >
                             {item}
-                            </a>
+                            </Link>
                         </li>
                         ))}
                     </ul>
@@ -35,8 +44,8 @@ export default function Footer():JSX.Element{
                 <div className="space-y-4">
                     <h3 className="font-medium uppercase text-sm tracking-wider">Contact</h3>
                     <address className="not-italic space-y-2">
-                        <p className="text-white/60">olamidemoses132@gmail.com</p>
                         <p className="text-white/60">08167893167</p>
+                        <p className="text-white/60">olamidemoses132@gmail.com</p>
                     </address>
                 </div>
 
