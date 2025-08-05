@@ -1,4 +1,6 @@
 import type { JSX } from 'react'
+import { MdOutlineMail } from "react-icons/md"
+import { IoLogoWhatsapp } from "react-icons/io5"
 
 export default function Home(): JSX.Element {
     return (
@@ -40,9 +42,33 @@ export default function Home(): JSX.Element {
                         💵 Convert visitors to clients!
                     </div>
                 </div>
+
                 <p className='text-lg md:text-xl mt-4 text-center md:text-start'>
                     We combine beautiful design with smart technology to grow your business.
                 </p>
+
+                <div className='flex gap-4 mt-8'>
+                    
+                    <a 
+                        className='flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white 
+                        font-bold px-6 py-3 rounded-lg transition-colors cursor-pointer'
+                        aria-label='Link to Email'
+                    >
+                        <MdOutlineMail size={20} />
+                        Email Us
+                    </a>
+
+                    
+                    <a 
+                        className='flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white 
+                        px-6 py-3 rounded-lg transition-colors cursor-pointer'
+                        aria-label='Link to whatsapp'
+                    >
+                        <IoLogoWhatsapp size={20} />
+                        WhatsApp
+                    </a>
+                </div>
+
             </div>
         </div>
     )
