@@ -4,7 +4,7 @@ export default function Home(): JSX.Element {
     return (
         <div>
             <div className='max-w-6xl'>
-                <h1 className='text-4xl sm:text-5xl md:text-6xl font-medium leading-20 md:w-2xl'>We build professional websites that:</h1>
+                <h1 className='text-5xl md:text-6xl text-center md:text-start font-medium leading-16 md:leading-20 md:w-2xl'>We build professional websites that:</h1>
                 <div className='mt-6 flex flex-col lg:flex-row gap-4'>
                     <div 
                         className='border border-white/20 rounded-full 
@@ -35,7 +35,7 @@ export default function Home(): JSX.Element {
                         💵 Convert visitors to clients!
                     </div>
                 </div>
-                <p className='text-xl mt-4'>
+                <p className='text-lg md:text-xl mt-4 text-center md:text-start'>
                     We combine beautiful design with smart technology to grow your business.
                 </p>
             </div>
