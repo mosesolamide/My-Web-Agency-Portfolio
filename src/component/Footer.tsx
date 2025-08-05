@@ -27,11 +27,11 @@ export default function Footer():JSX.Element{
                 <div className="space-y-4">
                     <h3 className="font-medium uppercase text-sm tracking-wider">Explore</h3>
                     <ul className="space-y-2">
-                        {['Home', 'Services', 'Projects', 'About'].map((item) => (
+                        {['home', 'services', 'projects', 'about'].map((item) => (
                         <li key={item}>
                             <Link 
-                                to='' 
-                                className="hover:text-purple-300 transition-colors"
+                                to={`/${item}`} 
+                                className="hover:text-purple-300 transition-colors capitalize"
                             >
                             {item}
                             </Link>
