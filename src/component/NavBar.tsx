@@ -9,6 +9,7 @@ import { MdOutlineCancel } from "react-icons/md"
 
 export default function NavBar():JSX.Element{
     const [showMenu, setShowMenu] = useState<boolean>(true)
+    console.log(showMenu)
     
     return(
         <header>
