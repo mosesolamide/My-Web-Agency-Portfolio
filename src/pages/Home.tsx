@@ -51,7 +51,7 @@ export default function Home(): JSX.Element {
                     
                     <a 
                         className='flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white 
-                        font-bold px-4 md:px-6 py-2 md:py-4 rounded-lg transition-colors cursor-pointer'
+                        font-bold px-4 md:px-6 py-2 md:py-4 rounded-lg transition-colors cursor-pointer text-xs sm:text-sm md:font-bold'
                         aria-label='Link to Email'
                     >
                         <MdOutlineMail size={20} />
@@ -61,7 +61,7 @@ export default function Home(): JSX.Element {
                     
                     <a 
                         className='flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white 
-                        px-4 md:px-6 py-2 md:py-4 rounded-lg transition-colors cursor-pointer'
+                        px-4 md:px-6 py-2 md:py-4 rounded-lg transition-colors cursor-pointer text-xs sm:text-sm md:font-bold'
                         aria-label='Link to whatsapp'
                     >
                         <IoLogoWhatsapp size={20} />
