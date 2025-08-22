@@ -8,7 +8,7 @@ export default function Footer():JSX.Element{
     return(
         <footer 
             className="text-white bg-[#020617] border-t
-          border-white/20 w-full max-w-[1200px] mx-auto min-h-[350px]
+          border-white/20 w-full mx-auto min-h-[350px]
             rounded-t-3xl px-6 py-12 md:px-8 md:py-16"
 
          >
@@ -25,7 +25,7 @@ export default function Footer():JSX.Element{
 
                 {/* Column 2: Links */}
                 <div className="space-y-4">
-                    <h3 className="font-medium uppercase text-sm tracking-wider">Explore</h3>
+                    <h3 className="font-medium uppercase text-sm tracking-wider">Quick Links</h3>
                     <ul className="space-y-2">
                         {['home', 'services', 'projects', 'about'].map((item) => (
                         <li key={item}>

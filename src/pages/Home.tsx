@@ -1,7 +1,6 @@
 import type { JSX } from 'react'
 import { MdOutlineMail } from "react-icons/md"
 import { IoLogoWhatsapp } from "react-icons/io5"
-import Services from '../component/Services'
 
 export default function Home(): JSX.Element {
     return (
@@ -72,7 +71,6 @@ export default function Home(): JSX.Element {
 
             </section>
 
-            <Services />
         </div>
     )
 }

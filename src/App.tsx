@@ -11,6 +11,13 @@ function App() {
         {
           index: true,
           element: <Home />
+        },
+        {
+          path: "services",
+          lazy: async () => {
+            const mod = await import("./pages/Services")
+            return{ Component: mod.default }
+          }
         }
       ]
     }

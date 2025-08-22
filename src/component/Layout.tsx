@@ -2,6 +2,7 @@ import type { JSX } from "react"
 import { Outlet } from "react-router"
 import NavBar from "./NavBar"
 import Footer from "./Footer"
+import LookingTo from "./LookingTo"
 
 export default function Layout():JSX.Element{
     return(
@@ -22,8 +23,9 @@ export default function Layout():JSX.Element{
                 {/* Your Content/Components */}
             <div className="relative z-10 min-h-screen">
                 <NavBar />
-                <main className='my-20 text-white px-10'>
+                <main className='my-18 text-white px-4 sm:px-6 md:px-8 lg:px-10'>
                     <Outlet />
+                    <LookingTo />
                 </main>
                 <Footer />
             </div>
