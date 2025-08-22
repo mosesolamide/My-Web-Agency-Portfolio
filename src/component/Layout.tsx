@@ -22,7 +22,7 @@ export default function Layout():JSX.Element{
                 {/* Your Content/Components */}
             <div className="relative z-10 min-h-screen">
                 <NavBar />
-                <main className='my-20 text-white px-18'>
+                <main className='my-20 text-white px-10'>
                     <Outlet />
                 </main>
                 <Footer />
