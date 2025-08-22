@@ -1,6 +1,6 @@
 import type { JSX } from 'react'
 import { useState, useEffect } from 'react'
-import { NavLink, Link as GetStarted } from 'react-router-dom'
+import { NavLink, Link as GetStarted } from 'react-router'
 import { TiThMenuOutline } from "react-icons/ti"
 import { MdOutlineCancel } from "react-icons/md"
 

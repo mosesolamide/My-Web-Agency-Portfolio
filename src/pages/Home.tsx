@@ -1,11 +1,12 @@
 import type { JSX } from 'react'
 import { MdOutlineMail } from "react-icons/md"
 import { IoLogoWhatsapp } from "react-icons/io5"
+import Services from '../component/Services'
 
 export default function Home(): JSX.Element {
     return (
         <div>
-            <div className='max-w-6xl'>
+            <section className='max-w-6xl'>
                 <h1 
                     className='text-4xl sm:text-5xl md:text-6xl font-semibold text-center md:text-start 
                     md:font-medium leading-16 md:leading-20 md:w-2xl'
@@ -69,7 +70,9 @@ export default function Home(): JSX.Element {
                     </a>
                 </div>
 
-            </div>
+            </section>
+
+            <Services />
         </div>
     )
 }

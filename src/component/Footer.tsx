@@ -2,7 +2,7 @@ import type { JSX } from 'react'
 import { CiTwitter, CiInstagram } from "react-icons/ci"
 import { PiTiktokLogoThin } from "react-icons/pi"
 // import { VscGithubAlt } from "react-icons/vsc"
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 
 export default function Footer():JSX.Element{
     return(

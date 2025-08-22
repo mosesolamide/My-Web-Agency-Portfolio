@@ -1,5 +1,5 @@
 import type { JSX } from "react"
-import { Outlet } from "react-router-dom"
+import { Outlet } from "react-router"
 import NavBar from "./NavBar"
 import Footer from "./Footer"
 
@@ -22,7 +22,7 @@ export default function Layout():JSX.Element{
                 {/* Your Content/Components */}
             <div className="relative z-10 min-h-screen">
                 <NavBar />
-                <main className='h-screen my-20 text-white px-18'>
+                <main className='my-20 text-white px-18'>
                     <Outlet />
                 </main>
                 <Footer />
