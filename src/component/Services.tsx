@@ -69,7 +69,12 @@ export default function Services():JSX.Element{
                 <div>
                     <h2 className="text-xl md:text-2xl font-medium">{offer.service}</h2>
                     <p className="mt-4">{offer.description}</p>
-                    <span className="bg-yellow-400 px-4 py-2 rounded-lg block">Status: {offer.available? "Available" : "Coming Soon"}</span>
+                    <span
+                        className={`px-4 py-2 rounded-lg block w-fit text-sm font-medium mt-2
+                        ${offer.available ? "bg-green-500 text-white" : "bg-gray-500 text-white"}`}
+                    >
+                        {offer.available ? "Available" : "⏳ Coming Soon"}
+                    </span>
                 </div>
             </div>
           ))}
