@@ -96,7 +96,8 @@ export default function AboutUs(): JSX.Element {
                 {missionVison.map(({icon,title,description},index) => (
                 <div
                     key={index}
-                    className="bg-[#020617] rounded-2xl p-6 text-center"
+                    className="bg-[#020617] rounded-2xl p-6 text-center hover:scale-105 transition-transform duration-300 border border-white/10 
+                       hover:shadow-xl"
                     aria-label={title}
                 >
                     <div className="mb-4 flex gap-2 items-center justify-center">{icon}  <span className="text-2xl font-medium">{title}</span></div>

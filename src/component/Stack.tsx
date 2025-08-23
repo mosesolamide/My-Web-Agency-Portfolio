@@ -42,7 +42,7 @@ export default function Stack():JSX.Element{
         </p>
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6 mt-6">
             {stackArr.map(({name,img},index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="text-center hover:scale-120 transition-transform duration-300">
                     <img src={img} alt={name} className="w-20 h-20" />
                     <h2>{name}</h2>
                 </div>

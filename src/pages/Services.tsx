@@ -61,8 +61,8 @@ export default function Services():JSX.Element{
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
           {whatWeOffer.map( ({id,description,service,available,img}) => (
             <div 
-                className="px-8 py-6 rounded-4xl bg-[#020617]/20 backdrop-blur-lg lg:backdrop-blur-none lg:bg-[#020617] border-2 cursor-pointer 
-                lg:hover:backdrop-blur-lg lg:hover:bg-[#020617]/20 transition-all duration-500"
+                className="px-8 py-6 rounded-4xl bg-[#020617]/20 backdrop-blur-lg lg:backdrop-blur-none lg:bg-[#020617] shadow-md border border-white/10 cursor-pointer 
+                lg:hover:backdrop-blur-lg lg:hover:bg-[#020617]/20 transition-all duration-500 hover:scale-105"
                 key={id}
             >
                 <img src={img} alt={img} className=" w-20 h-20 mb-2" />
