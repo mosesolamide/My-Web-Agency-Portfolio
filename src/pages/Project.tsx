@@ -31,6 +31,7 @@ export default function Project(): JSX.Element {
     }
   ]
 
+//   function to animate on mobile once clicked on
   const handleClick = (index: number) => {
     // If already active → open link
     if (activeIndex === index) {
