@@ -47,7 +47,7 @@ export default function Faq(): JSX.Element {
     <section className="mt-20 flex flex-col items-center">
       <SectionHead text="Frequently Asked Questions" />
 
-      <div className="mt-8 flex flex-col gap-4 w-full max-w-[600px]">
+      <div className="mt-8 flex flex-col gap-4 w-full max-w-[1000px]">
         {faq.map(({ question, responds }, index) => (
           <div
             key={index}
