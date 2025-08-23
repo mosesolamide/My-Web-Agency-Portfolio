@@ -1,4 +1,5 @@
 import type { JSX } from "react"
+import SectionHead from "../component/SectionHead"
 import Seo from "../assets/seo.svg"
 import Web from "../assets/web.svg"
 import AppDevelopment from "../assets/app development.svg"
@@ -56,12 +57,7 @@ export default function Services():JSX.Element{
     ]
     return(
       <section className="mt-20 flex flex-col justify-center items-center">
-        <h1 
-          className="text-2xl sm:text-3xl md:text-4xl font-medium rounded-tr-3xl
-           rounded-bl-3xl bg-[#020617]/20 border-t-2 py-2 px-4 backdrop-blur-lg"
-        >
-            Our Services
-        </h1>
+        <SectionHead text="Our Services" />
         <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
           {whatWeOffer.map( ({id,description,service,available,img}) => (
             <div 

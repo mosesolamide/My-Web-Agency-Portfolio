@@ -62,6 +62,7 @@ export default function NavBar(): JSX.Element {
               <li key={item.to}>
                 <NavLink
                   to={item.to}
+                  onClick={() => setShowMenu(false)}
                   className={({ isActive }) =>
                     isActive
                       ? "bg-[#1C1F2F] text-purple-300 px-4 py-2 rounded-full"

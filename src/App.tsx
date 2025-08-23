@@ -16,7 +16,14 @@ function App() {
           path: "services",
           lazy: async () => {
             const mod = await import("./pages/Services")
-            return{ Component: mod.default }
+            return { Component: mod.default }
+          }
+        },
+        {
+          path: "about",
+          lazy: async () => {
+            const mod = await import("./pages/AboutUs")
+            return { Component: mod.default }
           }
         }
       ]
