@@ -1,8 +1,11 @@
 import type { JSX } from "react"
+import { useLocation } from "react-router"
 import SectionHead from "../component/SectionHead"
-import { FaTrophy, FaUsers, FaMapMarkerAlt, FaClock } from "react-icons/fa"
+import { FaTrophy, FaUsers, FaMapMarkerAlt, FaClock, FaBullseye, FaEye } from "react-icons/fa"
 
 export default function AboutUs(): JSX.Element {
+  const location = useLocation()
+  const path = location.pathname
   const features = [
     {
       icon: <FaTrophy className="text-red-500 text-4xl" />,
@@ -26,13 +29,31 @@ export default function AboutUs(): JSX.Element {
     },
   ]
 
+  const missionVison = [
+    {
+        title: "Our Mission",
+        description: `Our mission is to empower businesses and individuals by
+        creating modern, responsive, and high-performing websites that not only
+        showcase their brand but also drive real results. We are committed to 
+        delivering solutions that are creative, reliable, and tailored to each client’s unique needs.`,
+        icon: <FaBullseye className="text-4xl text-red-500" />
+    },
+    {
+        title:"Our Vision",
+        description: `Our vision is to become a leading web agency recognized for transforming ideas into ,
+        powerful digital experiences. We aim to build a future where every business, no matter the size, can
+        thrive online through innovative technology and creative design.`,
+        icon: <FaEye className="text-4xl text-red-500" />
+    }
+  ]
+
   return (
     <section className="flex flex-col justify-center items-center mt-20 px-6 lg:px-20">
       {/* Section Heading */}
       <SectionHead text="About Us" />
 
       {/* Intro Text */}
-      <div className="mt-6 max-w-4xl text-center lg:text-left">
+      <div className="mt-8 max-w-4xl text-center lg:text-left">
         <p className="text-gray-300 text-base sm:text-lg leading-relaxed">
           At <span className="text-white font-semibold">M.O WebDev</span>, we help
           businesses and individuals bring their ideas to life with modern,
@@ -59,11 +80,29 @@ export default function AboutUs(): JSX.Element {
                        hover:shadow-xl hover:scale-105 transition-transform duration-300"
           >
             <div className="flex justify-center mb-4">{feature.icon}</div>
-            <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
+            <h2 className="text-lg font-semibold text-white">{feature.title}</h2>
             <p className="text-sm text-gray-400 mt-2">{feature.desc}</p>
           </div>
         ))}
       </div>
+
+      {/* mission and vision */}
+      {path === "/about" && (
+        <div className="mt-20 flex flex-col items-center justify-center">
+            <SectionHead text="Mission & Vision" />
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-8">
+                {missionVison.map(({icon,title,description},index) => (
+                <div
+                    key={index}
+                    className="bg-[#020617] rounded-2xl p-6 text-center"
+                >
+                    <div className="mb-4 flex gap-2 items-center justify-center">{icon}  <span className="text-2xl font-medium">{title}</span></div>
+                    <p className="leading-8 font-light">{description}</p>
+                </div>
+                ))}
+            </div>
+        </div>
+      )}
     </section>
   )
 }
