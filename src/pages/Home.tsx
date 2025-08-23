@@ -1,6 +1,7 @@
 import type { JSX } from 'react'
 import { Link } from 'react-router-dom'
 import AboutUs from './AboutUs'
+import Stack from '../component/Stack'
 import { MdOutlineMail } from "react-icons/md"
 import { IoLogoWhatsapp } from "react-icons/io5"
 
@@ -59,6 +60,8 @@ export default function Home(): JSX.Element {
                     </a>
                 </div>
             </section>
+
+            {/* About us */}
             <div className='flex flex-col justify-center items-center gap-4'>
                 <AboutUs />
                 <Link
@@ -67,9 +70,12 @@ export default function Home(): JSX.Element {
                     px-8 md:px-4 py-2 md:py-2 border-[1px] text-white bg-[#020617] border-white/20 rounded-full"
                     aria-label='View More'
                 >
-                    View more about us
+                    View more about us →
                 </Link>
             </div>
+
+            {/* stack */}
+            <Stack />
         </div>
     )
 }

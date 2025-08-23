@@ -1,6 +1,7 @@
 import type { JSX } from "react"
 import { useLocation } from "react-router"
 import SectionHead from "../component/SectionHead"
+import Stack from "../component/Stack"
 import { FaTrophy, FaUsers, FaMapMarkerAlt, FaClock, FaBullseye, FaEye } from "react-icons/fa"
 
 export default function AboutUs(): JSX.Element {
@@ -78,6 +79,7 @@ export default function AboutUs(): JSX.Element {
             key={idx}
             className="bg-[#020617] rounded-2xl p-6 text-center shadow-md border border-white/10 
                        hover:shadow-xl hover:scale-105 transition-transform duration-300"
+            aria-label={feature.title}
           >
             <div className="flex justify-center mb-4">{feature.icon}</div>
             <h2 className="text-lg font-semibold text-white">{feature.title}</h2>
@@ -95,12 +97,14 @@ export default function AboutUs(): JSX.Element {
                 <div
                     key={index}
                     className="bg-[#020617] rounded-2xl p-6 text-center"
+                    aria-label={title}
                 >
                     <div className="mb-4 flex gap-2 items-center justify-center">{icon}  <span className="text-2xl font-medium">{title}</span></div>
                     <p className="leading-8 font-light">{description}</p>
                 </div>
                 ))}
             </div>
+            <Stack />
         </div>
       )}
     </section>
