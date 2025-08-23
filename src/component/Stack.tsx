@@ -40,7 +40,7 @@ export default function Stack():JSX.Element{
         <p className="mt-6 text-lg text-center font-light pb-1">
             Tools and Technologies That Help Us Create Fast, Secure, and User-Friendly Websites
         </p>
-        <div className="flex gap-6 mt-6">
+        <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 gap-6 mt-6">
             {stackArr.map(({name,img},index) => (
                 <div key={index} className="text-center">
                     <img src={img} alt={name} className="w-20 h-20" />
