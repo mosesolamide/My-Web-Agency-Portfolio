@@ -25,6 +25,13 @@ function App() {
             const mod = await import("./pages/AboutUs")
             return { Component: mod.default }
           }
+        },
+        {
+          path: "project",
+          lazy: async () => {
+            const mod = await import("./pages/Project")
+            return { Component: mod.default }
+          }
         }
       ]
     }
