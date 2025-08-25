@@ -46,7 +46,7 @@ export default function Project(): JSX.Element {
     <section className="py-10 mt-20 flex flex-col items-center">
       <SectionHead text="Project" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
         {project.map((item, index) => (
           <div
             key={index}

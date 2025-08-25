@@ -1,4 +1,5 @@
 import type { JSX } from 'react'
+import { motion } from "motion/react"
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router'
 import { TiThMenuOutline } from "react-icons/ti"
@@ -28,7 +29,10 @@ export default function NavBar(): JSX.Element {
 
   return (
     <header className="relative h-24">
-      <nav
+      <motion.nav
+        initial={{opacity: 0 , y: -100}}
+        animate={{opacity: 1 , y: 0}}
+        transition={{duration: 0.8, ease: "easeOut"}}
         className="text-white flex py-8 px-4 md:items-center
           justify-between md:justify-around border-b-1 border-white/30 
           bg-[#020617]/60 backdrop-blur-lg fixed w-full h-24 z-50"
@@ -102,7 +106,7 @@ export default function NavBar(): JSX.Element {
         >
           <TiThMenuOutline size={30} className="text-current" />
         </button>
-      </nav>
+      </motion.nav>
     </header>
   )
 }
