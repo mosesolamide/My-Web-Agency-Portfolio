@@ -18,11 +18,11 @@ export default function AboutUs(): JSX.Element {
       title: "200+ Clients",
       desc: "Satisfied customers nationwide",
     },
-    {
-      icon: <FaMapMarkerAlt className="text-red-500 text-4xl" />,
-      title: "Lagos",
-      desc: "Offices in major cities",
-    },
+    // {
+    //   icon: <FaMapMarkerAlt className="text-red-500 text-4xl" />,
+    //   title: "Lagos",
+    //   desc: "Offices in major cities",
+    // },
     {
       icon: <FaClock className="text-red-500 text-4xl" />,
       title: "24/7 Support",
@@ -73,7 +73,7 @@ export default function AboutUs(): JSX.Element {
       </div>
 
       {/* Features Grid */}
-      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl">
+      <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
         {features.map((feature, idx) => (
           <div
             key={idx}

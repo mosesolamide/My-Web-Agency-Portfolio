@@ -1,12 +1,17 @@
 import { createBrowserRouter, RouterProvider } from "react-router"
 import Layout from "./component/Layout"
 import Home from "./pages/Home"
+import ScrollToTop from "./component/ScrollTop"
 
 function App() {
   const routes = [
     {
       path: "/",
-      element: <Layout />,
+      element: (
+        <ScrollToTop>
+          <Layout />
+        </ScrollToTop>
+      ),
       children: [
         {
           index: true,
@@ -30,6 +35,13 @@ function App() {
           path: "project",
           lazy: async () => {
             const mod = await import("./pages/Project")
+            return { Component: mod.default }
+          }
+        },
+        {
+          path: "contact",
+          lazy: async () => {
+            const mod = await import("./pages/ContactUs")
             return { Component: mod.default }
           }
         }
