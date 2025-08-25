@@ -138,7 +138,12 @@ export default function ContactUs(): JSX.Element {
               {icons}
               <h3 className="text-lg">{text}</h3>
               <span className="text-xs lg:text-sm">{p}</span>
-              <a href={to} aria-label={`Link to ${text}`} className="bg-red-500 hover:bg-red-600 transition-all py-2 px-2 lg:px-4 rounded-sm mt-2">
+              <a 
+                href={to} 
+                aria-label={`Link to ${text}`} 
+                className="bg-red-500 hover:bg-red-600 transition-all py-2 px-2 lg:px-4 rounded-sm mt-2"
+                target="_blank"
+              >
                 {aText}
               </a>
             </div>

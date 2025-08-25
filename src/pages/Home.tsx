@@ -51,6 +51,7 @@ export default function Home(): JSX.Element {
                 px-2 md:px-4 py-2 md:py-4 rounded-lg transition-colors cursor-pointer text-xs sm:text-sm md:font-bold"
                 aria-label="Link to whatsapp"
                 href="https://wa.me/2348167893167?text=Hello%20I%20am%20interested%20in%20your%20services"
+                target="_blank"
                 >
                 <IoLogoWhatsapp size={20} />
                 WhatsApp

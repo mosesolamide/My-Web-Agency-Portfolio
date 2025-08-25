@@ -57,7 +57,11 @@ export default function Footer():JSX.Element{
                             className='hover:bg-[#1C1F2F] w-10 h-10 rounded-full flex items-center
                             justify-center transition-colors duration-500'
                         >
-                            <a href="">
+                            <a 
+                                href="https://twitter.com/MoWebDev_NG"
+                                target='_blank'
+                                rel="noopener noreferrer"
+                            >
                                 <CiTwitter size={25}/>
                             </a>
                         </li>
@@ -65,7 +69,11 @@ export default function Footer():JSX.Element{
                             className='hover:bg-[#1C1F2F] w-10 h-10 rounded-full flex items-center
                             justify-center transition-colors duration-500'
                         >
-                            <a href="">
+                            <a 
+                                href="https://instagram.com/mowebdev_ng"
+                                target='_blank'
+                                rel="noopener noreferrer"
+                            >
                                 <CiInstagram size={25}/>
                             </a>
                         </li>
@@ -73,7 +81,11 @@ export default function Footer():JSX.Element{
                             className='hover:bg-[#1C1F2F] w-10 h-10 rounded-full flex items-center
                             justify-center transition-colors duration-500'
                         >
-                            <a href="">
+                            <a 
+                                href="https://www.tiktok.com/@mowebdev_ng" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                            >
                                 <PiTiktokLogoThin size={25}/>
                             </a>
                         </li>
