@@ -2,7 +2,7 @@ import type { JSX } from "react"
 import { useLocation } from "react-router"
 import SectionHead from "../component/SectionHead"
 import Stack from "../component/Stack"
-import { FaTrophy, FaUsers, FaMapMarkerAlt, FaClock, FaBullseye, FaEye } from "react-icons/fa"
+import { FaTrophy, FaUsers, FaClock, FaBullseye, FaEye } from "react-icons/fa"
 
 export default function AboutUs(): JSX.Element {
   const location = useLocation()
