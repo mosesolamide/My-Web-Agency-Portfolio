@@ -54,31 +54,44 @@ export default function NavBar(): JSX.Element {
             <MdOutlineCancel size={30} className="text-white" />
           </button>
 
-          <ul
-            className="flex flex-col md:flex-row gap-4 md:gap-6
-              lg:gap-8 text-2xl md:text-sm lg:text-lg font-medium"
-          >
-            {navItems.map((item) => (
-              <li key={item.to}>
-                <NavLink
-                  to={item.to}
-                  className={({ isActive }) =>
-                    isActive
-                      ? "bg-[#1C1F2F] text-purple-300 px-4 py-2 rounded-full"
-                      : "hover:text-purple-300 transition-colors"
-                  }
-                >
-                  {item.label}
-                </NavLink>
-              </li>
-            ))}
-          </ul>
+<ul
+  className="flex flex-col md:flex-row gap-4 md:gap-6
+    lg:gap-8 text-2xl md:text-sm lg:text-lg font-medium"
+>
+  {navItems.map((item) => (
+    <li key={item.to}>
+      <NavLink
+        to={item.to}
+        onClick={() => tabletSize && setShowMenu(false)}   // 👈 closes menu on mobile
+        className={({ isActive }) =>
+          isActive
+            ? "bg-[#1C1F2F] text-purple-300 px-4 py-2 rounded-full"
+            : "hover:text-purple-300 transition-colors"
+        }
+      >
+        {item.label}
+      </NavLink>
+    </li>
+  ))}
+
+  {/* Pricing button always visible */}
+  <li className="mt-2 md:mt-0">
+    <GetStarted 
+      text="Pricing" 
+      path="/pricing" 
+      // 👇 close menu when clicked on small screen
+      onClick={() => tabletSize && setShowMenu(false)}  
+    />
+  </li>
+</ul>
+
+
         </div>
 
         {/* Get Started button */}
-        <div className="hidden md:flex">
-          <GetStarted text='Pricing' />
-        </div>
+        {/* <div className="hidden md:flex">
+          <GetStarted text='Pricing' path='/pricing' />
+        </div> */}
 
         {/* Hamburger Menu Button */}
         <button

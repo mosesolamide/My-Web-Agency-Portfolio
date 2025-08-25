@@ -41,6 +41,7 @@ export default function Home(): JSX.Element {
                 <a className="flex items-center gap-2 bg-[#2563EB] hover:bg-[#1D4ED8] text-white 
                 font-bold px-4 md:px-6 py-2 md:py-4 rounded-lg transition-colors cursor-pointer text-xs sm:text-sm md:font-bold"
                 aria-label="Link to Email"
+                href="mailto:olamidemoses132@gmail.com"
                 >
                 <MdOutlineMail size={20} />
                 Email Us
@@ -49,6 +50,7 @@ export default function Home(): JSX.Element {
                 <a className="flex items-center gap-2 bg-[#25D366] hover:bg-[#128C7E] text-white 
                 px-2 md:px-4 py-2 md:py-4 rounded-lg transition-colors cursor-pointer text-xs sm:text-sm md:font-bold"
                 aria-label="Link to whatsapp"
+                href="https://wa.me/2348167893167?text=Hello%20I%20am%20interested%20in%20your%20services"
                 >
                 <IoLogoWhatsapp size={20} />
                 WhatsApp

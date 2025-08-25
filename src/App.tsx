@@ -44,6 +44,20 @@ function App() {
             const mod = await import("./pages/ContactUs")
             return { Component: mod.default }
           }
+        },
+        {
+          path: "pricing",
+          lazy: async () => {
+            const mod = await import("./pages/Pricing")
+            return { Component: mod.default }
+          },
+        },
+        {
+          path: "blog",
+          lazy: async () => {
+            const mod = await import("./pages/Blog")
+            return { Component: mod.default }
+          },
         }
       ]
     }

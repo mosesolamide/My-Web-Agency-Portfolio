@@ -20,7 +20,7 @@ export default function LookingTo(): JSX.Element {
       </div>
 
       <div className="flex-shrink-0">
-        <GetStarted text="Get Started →" />
+        <GetStarted text="Get Started →" path="/contact" />
       </div>
     </div>
   )

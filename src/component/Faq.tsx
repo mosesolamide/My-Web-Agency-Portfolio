@@ -55,12 +55,12 @@ export default function Faq(): JSX.Element {
               rounded-2xl backdrop-blur-lg transition-transform"
           >
             <div
-              className="flex justify-between items-center border-b border-white/20 pb-4 cursor-pointer"
+              className="flex justify-between gap-2 items-center border-b border-white/20 pb-4 cursor-pointer"
               onClick={() => setOpened(opened === index ? null : index)}
             >
-              <span className="font-medium">{question}</span>
+              <span className="font-medium text-xs md:text-sm lg:text-xl">{question}</span>
               <button
-                className="bg-red-500 hover:bg-red-600 rounded-full w-8 h-8 flex items-center justify-center font-bold text-white transition"
+                className="bg-red-500 hover:bg-red-600 rounded-full w-6 md:w-8 h-6 md:h-8 flex items-center justify-center font-bold text-white transition"
                 aria-label="Toggle FAQ"
               >
                 {opened === index ? "−" : "+"}
