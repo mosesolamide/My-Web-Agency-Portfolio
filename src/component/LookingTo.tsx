@@ -1,13 +1,22 @@
 import type { JSX } from "react"
+import { motion } from "motion/react"
 import GetStarted from "./GetStarted"
+import { useLocation } from "react-router-dom"
 
 export default function LookingTo(): JSX.Element {
+  const location = useLocation()
+
   return (
-    <div
+    <motion.div
+      key={location.pathname} // Add this line
       className="relative bg-gradient-to-r from-blue-900/50 via-slate-900/40 to-purple-900/50 
       border border-white/20 backdrop-blur-xl 
       flex flex-col lg:flex-row lg:justify-between lg:items-center
       gap-6 lg:gap-12 mt-20 rounded-2xl px-8 py-12 shadow-2xl"
+      initial={{opacity: 0, y: 50}}
+      whileInView={{opacity: 1, y: 0}}
+      transition={{duration: 0.8, ease: "easeOut"}}
+      viewport={{once: true, amount: 0.5}}
     >
       <div className="max-w-2xl">
         <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
@@ -22,6 +31,6 @@ export default function LookingTo(): JSX.Element {
       <div className="flex-shrink-0">
         <GetStarted text="Get Started →" path="/contact" />
       </div>
-    </div>
+    </motion.div>
   )
 }

@@ -47,18 +47,18 @@ export default function Project(): JSX.Element {
     <section className="py-10 mt-20 flex flex-col items-center">
       <SectionHead text="Project" />
 
-      <motion.div 
+      <div 
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14"
-        initial={{opacity: 0, y: 50}}
-        whileInView={{opacity: 1, y: 0}}
-        viewport={{once: true, amount: .4}}
-        transition={{duration: .8, delay: .2}}
       >
         {project.map((item, index) => (
-          <div
+          <motion.div
             key={index}
             onClick={() => handleClick(index)}
             className="group block relative overflow-hidden rounded-2xl shadow-lg cursor-pointer"
+            initial={{opacity: 0, y: 50}}
+            whileInView={{opacity: 1, y: 0}}
+            viewport={{once: true, amount: .4}}
+            transition={{duration: .8, delay: .2 * index}}
           >
             {/* Image container with scroll effect */}
             <div className="h-64 overflow-hidden">
@@ -71,12 +71,12 @@ export default function Project(): JSX.Element {
             </div>
 
             {/* Title overlay */}
-            <div className="absolute bottom-0 left-0 right-0 bg-[#020617] text-white p-3 text-center group-hover:text-red-500 transition">
+            <div className="absolute bottom-0 left-0 right-0 bg-[#020617] backdrop-blur-lg text-white p-3 text-center group-hover:text-red-500 transition">
               <h3 className="text-lg font-semibold">{item.name}</h3>
             </div>
-          </div>
+          </motion.div>
         ))}
-      </motion.div>
+      </div>
     </section>
   )
 }
