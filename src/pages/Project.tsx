@@ -1,5 +1,6 @@
 import type { JSX } from "react"
 import { useState } from "react"
+import { motion } from "motion/react"
 import SectionHead from "../component/SectionHead"
 import CandleLeaf from "../assets/PROJECT-IMG/candle-leaf.png"
 import Furniture from "../assets/PROJECT-IMG/Furniture.png"
@@ -46,7 +47,13 @@ export default function Project(): JSX.Element {
     <section className="py-10 mt-20 flex flex-col items-center">
       <SectionHead text="Project" />
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+      <motion.div 
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-14"
+        initial={{opacity: 0, y: 50}}
+        whileInView={{opacity: 1, y: 0}}
+        viewport={{once: true, amount: .4}}
+        transition={{duration: .8, delay: .2}}
+      >
         {project.map((item, index) => (
           <div
             key={index}
@@ -69,7 +76,7 @@ export default function Project(): JSX.Element {
             </div>
           </div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }

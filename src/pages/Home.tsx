@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
     return (
         <div>
             <motion.section
-              className="max-w-6xl mx-auto text-center flex flex-col items-center h-100"
+              className="max-w-6xl mx-auto text-center flex flex-col items-center h-1/2"
                 initial={{ opacity: 0, x: -100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.7, ease: "easeInOut" }}
