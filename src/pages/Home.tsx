@@ -26,7 +26,7 @@ export default function Home(): JSX.Element {
                 We build professional websites that:
             </h1>
 
-            <div className="mt-6 flex flex-col md:flex-row justify-center gap-4">
+            <div className="mt-6 flex flex-col md:flex-row justify-center gap-4 w-full">
                 {badges.map((badge, i) => (
                 <div 
                     key={i}

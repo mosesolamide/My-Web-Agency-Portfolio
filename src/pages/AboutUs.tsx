@@ -62,7 +62,7 @@ export default function AboutUs(): JSX.Element {
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8, delay: .5, ease: "easeOut" }}
         >
           At <span className="text-white font-semibold">M.O WebDev</span>, we help
           businesses and individuals bring their ideas to life with modern,

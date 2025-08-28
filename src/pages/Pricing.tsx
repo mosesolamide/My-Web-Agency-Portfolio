@@ -1,4 +1,5 @@
 import type { JSX } from "react"
+import { motion } from "motion/react"
 import SectionHead from "../component/SectionHead"
 import { FaCheck } from "react-icons/fa"
 
@@ -17,7 +18,7 @@ export default function Pricing(): JSX.Element {
     },
     {
       title: "Advanced Plan",
-      price: "₦500,000",
+      price: "₦450,000",
       features: [
         "Domain & Hosting (1 Year)",
         "Business Emails",
@@ -50,19 +51,28 @@ export default function Pricing(): JSX.Element {
   return (
     <section className="mt-20 flex flex-col items-center px-4">
       <SectionHead text="Our Plans & Pricing" />
-      <p className="mt-3 text-center max-w-2xl mx-auto text-white">
+      <motion.p 
+        className="mt-8 text-center max-w-2xl mx-auto text-white"
+        initial={{opacity: 0}}
+        whileInView={{opacity: 1}}
+        transition={{duration: .8, delay: .5 }}
+      >
         Wondering how much it costs to build a website with us? Explore our
         flexible web development pricing packages designed to fit your business needs.
-      </p>
+      </motion.p>
 
       {/* Grid Layout */}
       <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl">
         {plans.map((plan, index) => (
-          <div
+          <motion.div
             key={index}
             className="relative bg-[#020617] hover:bg-[#020617]/20 
             hover:backdrop-blur-lg hover:scale-105 transition-transform duration-300
              px-4 py-2 rounded-2xl pt-32 pb-6 w-full border border-white/10"
+             initial={{opacity: 0, y: 50}}
+             whileInView={{opacity: 1, y: 0}}
+             transition={{duration: .8, delay: .2 * index, ease: "easeOut"}}
+             viewport={{ once: true}}
           >
             <div
               className="bg-red-500 px-4 py-6 w-full absolute top-0 right-0 rounded-t-2xl text-center"
@@ -93,7 +103,7 @@ export default function Pricing(): JSX.Element {
             >
               Order Now
             </a>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

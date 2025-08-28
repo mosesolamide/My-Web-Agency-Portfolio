@@ -1,11 +1,14 @@
 import { useEffect, useState, type JSX } from "react"
+import { motion } from "motion/react"
 import { useForm, ValidationError } from '@formspree/react'
+import { useLocation } from "react-router-dom"
 import SectionHead from "../component/SectionHead"
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaEnvelopeOpen } from "react-icons/fa"
 
 export default function ContactUs(): JSX.Element {
   const [state, handleSubmit] = useForm("xrbazdkj")
   const [showMessage, setShowMessage] = useState(false)
+  const location = useLocation()
 
   // controlled inputs
   const [formData, setFormData] = useState({
@@ -46,21 +49,37 @@ export default function ContactUs(): JSX.Element {
   ]
 
   return (
-    <section className="flex flex-col items-center">
+    <section className="flex flex-col items-center" key={location.pathname}>
       <SectionHead text="Get in Touch" />
-      <p className="my-6 text-center max-w-xl leading-relaxed">
+      <motion.p 
+        className="my-6 text-center max-w-xl leading-relaxed text-gray-300"
+        initial={{opacity: 0}}
+        animate={{opacity: 1}}
+        transition={{duration: .8, delay: .5}}
+      >
         Contact <span className="font-semibold text-red-500">M.O WebDev</span> - best Web Developer in Nigeria via email, call or book a consultation. We typically reply within 24hrs.
-      </p>
+      </motion.p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 mt-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 mt-4 w-full max-w-6xl">
         
         {/* FORM */}
-        <form onSubmit={handleSubmit} className="rounded-2xl bg-white shadow-lg text-blue-950 py-8 px-6 space-y-6 md:row-span-2">
+        <motion.form 
+          onSubmit={handleSubmit} 
+          className="rounded-2xl bg-white shadow-lg text-blue-950 py-8 px-6 space-y-6 md:row-span-2"
+          initial={{opacity: 0, x: -50}}
+          whileInView={{opacity: 1, x: 0}}
+          viewport={{once: true, amount: 0.5}}
+          transition={{type:"tween",duration: 0.8, ease: "easeOut"}}
+        >
           {/* Success Message */}
           {showMessage && (
-            <div className="fixed top-6 left-1/2 -translate-x-1/2 w-fit p-4 text-green-800 bg-green-100 border border-green-300 rounded-lg shadow-lg z-50">
+            <motion.div 
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="fixed top-6 left-1/2 -translate-x-1/2 w-fit p-4 text-green-800 bg-green-100 border border-green-300 rounded-lg shadow-lg z-50"
+            >
               ✅ Thank you! Your message has been sent successfully we will get back to you soon.
-            </div>
+            </motion.div>
           )}
 
           {/* Name */}
@@ -116,39 +135,58 @@ export default function ContactUs(): JSX.Element {
           >
             Send Message
           </button>
-        </form>
+        </motion.form>
         
         {/* CONTACT INFO */}
-        <div className="bg-[#020617] flex flex-col items-center justify-center rounded-2xl border border-white/10 hover:scale-105 transition-transform duration-300 py-4">
-          <h2 className="text-3xl mb-4">Contact Information</h2>
-          <ul>
-            <li className="flex items-center gap-4 mb-2">
+        <motion.div 
+          className="bg-[#020617] flex flex-col items-center justify-center rounded-2xl
+          border border-white/10 p-6"
+          initial={{opacity: 0, x: 50}}
+          whileInView={{opacity: 1, x: 0}}
+          viewport={{once: true, amount: 0.5}}
+          transition={{duration: 0.8, ease: "easeOut", delay: 0.2}}
+        >
+          <h2 className="text-2xl font-semibold mb-4 text-white">Contact Information</h2>
+          <ul className="space-y-3">
+            <li className="flex items-center gap-4 text-gray-300">
               <FaEnvelope className="text-red-500" /> olamidemoses132@gmail.com
             </li>
-            <li className="flex items-center gap-4">
+            <li className="flex items-center gap-4 text-gray-300">
               <FaPhoneAlt className="text-red-500" /> 08167893167
             </li>
           </ul>
-        </div>
+        </motion.div>
 
         {/* QUICK CONTACT CARDS */}
-        <div className="flex gap-4">
+        <motion.div 
+          className="flex flex-col md:flex-row gap-4 md:col-span-1"
+          initial={{opacity: 0, x: 50}}
+          whileInView={{opacity: 1, x: 0}}
+          viewport={{once: true, amount: 0.5}}
+          transition={{duration: 0.8, ease: "easeOut", delay: 0.4}}
+        >
           {contactInfo.map(({ icons, text, p, to, aText }, index) => (
-            <div key={index} className="flex flex-col gap-2 items-center justify-center hover:scale-105 transition-transform duration-300 bg-[#020617] rounded-2xl border-white/10 border px-4 md:px-6 py-4 md:py-0">
+            <motion.div 
+              key={index} 
+              className="flex flex-col gap-2 items-center justify-center bg-[#020617] rounded-2xl border-white/10 border p-6 flex-1"
+              whileHover={{ y: -5 }}
+              transition={{ duration: 0.2 }}
+            >
               {icons}
-              <h3 className="text-lg">{text}</h3>
-              <span className="text-xs lg:text-sm">{p}</span>
+              <h3 className="text-lg font-medium text-white">{text}</h3>
+              <span className="text-sm text-gray-300 text-center">{p}</span>
               <a 
                 href={to} 
                 aria-label={`Link to ${text}`} 
-                className="bg-red-500 hover:bg-red-600 transition-all py-2 px-2 lg:px-4 rounded-sm mt-2"
+                className="bg-red-500 hover:bg-red-600 transition-all py-2 px-4 rounded-sm mt-2 text-white text-sm font-medium"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 {aText}
               </a>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

@@ -38,7 +38,8 @@ export default function NavBar(): JSX.Element {
           bg-[#020617]/60 backdrop-blur-lg fixed w-full h-24 z-50"
       >
         <div>
-          <h1 className="font-bold text-2xl">M.OWebDev</h1>
+          {/* <h1 className="font-bold text-2xl">M.OWebDev</h1> */}
+          <img src="./mowebdev_logo.png" alt="Moses website development logo" className='w-50 h-35' />
         </div>
 
         {/* Menu */}
