@@ -33,13 +33,13 @@ export default function NavBar(): JSX.Element {
         initial={{opacity: 0 , y: -100}}
         animate={{opacity: 1 , y: 0}}
         transition={{duration: 0.8, ease: "easeOut"}}
-        className="text-white flex py-8 px-4 md:items-center
+        className="text-white flex items-center py-8 px-4
           justify-between md:justify-around border-b-1 border-white/30 
           bg-[#020617]/60 backdrop-blur-lg fixed w-full h-24 z-50"
       >
         <div>
           {/* <h1 className="font-bold text-2xl">M.OWebDev</h1> */}
-          <img src="./mowebdev_logo.png" alt="Moses website development logo" className='w-50 h-35' />
+          <img src="./mowebdev_logo.png" alt="Moses website development logo" className='w-50 m-0' />
         </div>
 
         {/* Menu */}
