@@ -24,11 +24,6 @@ export default function Project(): JSX.Element {
       name: "Furnitures",
       url: "https://furniture237.netlify.app/",
       image: Furniture
-    },
-    {
-      name: "Furnitures",
-      url: "https://furniture237.netlify.app/",
-      image: Furniture
     }
   ]
 
@@ -61,14 +56,16 @@ export default function Project(): JSX.Element {
             transition={{duration: .8, delay: .2 * index}}
           >
             {/* Image container with scroll effect */}
-            <div className="h-64 overflow-hidden">
-              <img
-                src={item.image}
-                alt={item.name}
-                className={`w-full h-auto transition-transform duration-[7000ms] ease-linear
-                ${activeIndex === index ? "-translate-y-[70%]" : "group-hover:-translate-y-[70%]"}`}
-              />
-            </div>
+          <div className="h-64 overflow-hidden">
+            <img
+              src={item.image}
+              alt={`Product image of ${item.name}`}
+              loading="lazy"
+              className={`w-full h-auto object-contain transition-transform duration-[7000ms] ease-linear
+              ${activeIndex === index ? "-translate-y-[70%]" : "group-hover:-translate-y-[70%]"}`}
+            />
+          </div>
+
 
             {/* Title overlay */}
             <div className="absolute bottom-0 left-0 right-0 bg-[#020617] backdrop-blur-lg text-white p-3 text-center group-hover:text-red-500 transition">

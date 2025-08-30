@@ -35,14 +35,14 @@ export default function Home(): JSX.Element {
                 {/* Badges */}
                 <div className="mt-6 flex flex-col md:flex-row justify-center gap-4 w-full">
                     {badges.map((badge, i) => (
-                        <div
+                        <h2
                             key={i}
                             className="border border-white/20 rounded-full 
                             text-center px-4 py-2 bg-[#020617]/20 backdrop-blur-lg 
                             font-medium text-xs sm:text-sm md:text-lg"
                         >
                             {badge.text}
-                        </div>
+                        </h2>
                     ))}
                 </div>
 

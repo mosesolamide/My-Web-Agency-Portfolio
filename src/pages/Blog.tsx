@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import SectionHead from "../component/SectionHead"
 
 type BlogPost = {
   id: number
@@ -45,10 +46,10 @@ const blogPosts: BlogPost[] = [
 
 export default function BlogPage() {
   return (
-    <section className="px-6 py-12 max-w-5xl mx-auto">
-      <h1 className="text-4xl font-bold mb-8 text-center">My Blog</h1>
+    <section className="px-6 py-6 max-w-5xl mx-auto flex flex-col items-center">
+      <SectionHead text="My Blog" />
 
-      <div className="grid gap-8 sm:grid-cols-2">
+      <div className="grid gap-8 sm:grid-cols-2 mt-8">
         {blogPosts.map((post, index) => (
           <motion.div
             key={post.id}
