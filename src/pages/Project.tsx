@@ -2,9 +2,9 @@ import type { JSX } from "react"
 import { useState } from "react"
 import { motion } from "motion/react"
 import SectionHead from "../component/SectionHead"
-import CandleLeaf from "../assets/PROJECT-IMG/candle-leaf.png"
-import Furniture from "../assets/PROJECT-IMG/Furniture.png"
-import Hexashop from "../assets/PROJECT-IMG/Hexashop.png"
+import CandleLeaf from "../assets/PROJECT-IMG/candle-leaf.webp"
+import Furniture from "../assets/PROJECT-IMG/Furniture.webp"
+import Hexashop from "../assets/PROJECT-IMG/Hexashop.webp"
 
 export default function Project(): JSX.Element {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)

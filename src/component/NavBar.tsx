@@ -39,7 +39,7 @@ export default function NavBar(): JSX.Element {
       >
         <div>
           {/* <h1 className="font-bold text-2xl">M.OWebDev</h1> */}
-          <img src="./mowebdev_logo.png" alt="Moses website development logo" className='w-50 m-0' />
+          <img src="./mowebdev_logo.webp" alt="Moses website development logo" className='w-50 m-0' />
         </div>
 
         {/* Menu */}

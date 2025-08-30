@@ -72,7 +72,7 @@ export default function Services(): JSX.Element {
             viewport={{ once: true, amount: 0.5 }}
             transition={{ type: "tween", duration: 0.5, ease: "easeOut", delay: id * 0.1 }}
           >
-            <img src={img} alt={service} className="w-20 h-20 mb-2" />
+            <img src={img} alt={service} className="w-20 h-20 mb-2" loading="lazy" />
             <div>
               <h2 className="text-xl md:text-2xl font-medium text-white">{service}</h2>
               <p className="mt-4 text-gray-300 leading-relaxed">{description}</p>

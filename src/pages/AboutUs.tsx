@@ -64,7 +64,7 @@ export default function AboutUs(): JSX.Element {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: .5, ease: "easeOut" }}
         >
-          At <span className="text-white font-semibold">M.O WebDev</span>, we help
+          At <span className="text-[#2563EB] font-semibold">M.O WebDev</span>, we help
           businesses and individuals bring their ideas to life with modern,
           user-friendly, and responsive websites.  
           <br /><br />

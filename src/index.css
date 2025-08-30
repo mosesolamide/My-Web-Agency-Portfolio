@@ -3,5 +3,6 @@
 
 @theme{
     --font-sans: "Nata Sans", sans-serif;
-    --breakpoint-tab: 51rem;
+    --src: url('/path-to-font.woff2') format('woff2');
+    --font-display: swap;
 }

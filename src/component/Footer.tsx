@@ -18,7 +18,7 @@ export default function Footer():JSX.Element{
                 {/* Column 1: Branding */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">MoWebDev</h2>
-                    <p className="text-white/60 text-sm">
+                    <p className="text-sm">
                         Crafting pixel-perfect digital experiences.
                     </p>
                 </div>
@@ -44,8 +44,8 @@ export default function Footer():JSX.Element{
                 <div className="space-y-4">
                     <h3 className="font-medium uppercase text-sm tracking-wider">Contact Us</h3>
                     <address className="not-italic space-y-2">
-                        <p className="text-white/60">08167893167</p>
-                        <p className="text-white/60">olamidemoses132@gmail.com</p>
+                        <p>08167893167</p>
+                        <p>olamidemoses132@gmail.com</p>
                     </address>
                 </div>
 
@@ -102,7 +102,7 @@ export default function Footer():JSX.Element{
             </div>
 
             {/* Copyright */}
-            <div className="border-t border-white/10 mt-12 pt-6 text-center text-sm text-white/40">
+            <div className="border-t border-white/10 mt-12 pt-6 text-center text-sm">
                 © {new Date().getFullYear()} MoWebDev. All rights reserved.
             </div>
         </footer>
