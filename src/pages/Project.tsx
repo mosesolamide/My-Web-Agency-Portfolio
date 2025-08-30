@@ -72,7 +72,7 @@ export default function Project(): JSX.Element {
 
             {/* Title overlay */}
             <div className="absolute bottom-0 left-0 right-0 bg-[#020617] backdrop-blur-lg text-white p-3 text-center group-hover:text-red-500 transition">
-              <h3 className="text-lg font-semibold">{item.name}</h3>
+              <h2 className="text-lg font-semibold">{item.name}</h2>
             </div>
           </motion.div>
         ))}

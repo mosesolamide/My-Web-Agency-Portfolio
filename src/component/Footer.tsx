@@ -61,6 +61,7 @@ export default function Footer():JSX.Element{
                                 href="https://twitter.com/MoWebDev_NG"
                                 target='_blank'
                                 rel="noopener noreferrer"
+                                aria-label='Follow us on twitter'
                             >
                                 <CiTwitter size={25}/>
                             </a>
@@ -73,6 +74,7 @@ export default function Footer():JSX.Element{
                                 href="https://instagram.com/mowebdev_ng"
                                 target='_blank'
                                 rel="noopener noreferrer"
+                                aria-label='Follow us on instagram'
                             >
                                 <CiInstagram size={25}/>
                             </a>
@@ -85,6 +87,7 @@ export default function Footer():JSX.Element{
                                 href="https://www.tiktok.com/@mowebdev_ng" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
+                                aria-label='Follow us on tiktok' 
                             >
                                 <PiTiktokLogoThin size={25}/>
                             </a>

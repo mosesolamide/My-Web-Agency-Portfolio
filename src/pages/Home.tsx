@@ -64,7 +64,7 @@ export default function Home(): JSX.Element {
                     </a>
 
                     <a
-                        className="flex items-center gap-2 bg-green-600 hover:bg-green-500 text-white 
+                        className="flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white 
                         px-2 md:px-4 py-2 md:py-4 rounded-lg transition-colors cursor-pointer text-xs sm:text-sm md:font-bold"
                         aria-label="Link to whatsapp"
                         href="https://wa.me/2348167893167?text=Hello%20I%20am%20interested%20in%20your%20services"
