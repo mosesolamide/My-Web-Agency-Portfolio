@@ -24,16 +24,16 @@ export default function Home(): JSX.Element {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: 0.7, ease: "easeInOut" }}
             >
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight md:w-3/4">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-tight md:w-3/4 my-6">
                     Welcome to <span className="text-[#2563EB]">M.O WebDev</span>
                 </h1>
 
-                <p className="text-lg md:text-xl mt-4 md:w-2/3">
+                <p className="text-lg md:text-xl my-6 md:w-2/3">
                     We build fast, responsive, SEO-friendly websites that attract customers and boost sales.
                 </p>
 
                 {/* Badges */}
-                <div className="mt-6 flex flex-col md:flex-row justify-center gap-4 w-full">
+                <div className="my-6 flex flex-col md:flex-row justify-center gap-4 w-full">
                     {badges.map((badge, i) => (
                         <h2
                             key={i}
