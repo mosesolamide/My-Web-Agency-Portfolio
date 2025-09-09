@@ -1,11 +1,11 @@
-import type { JSX } from "react"
+
 import { Outlet } from "react-router"
 import NavBar from "./NavBar"
 import Footer from "./Footer"
 import LookingTo from "./LookingTo"
 import Faq from "./Faq"
 
-export default function Layout():JSX.Element{
+export default function Layout(){
     return(
         <div className="min-h-screen w-full bg-[#020617] relative">
             {/* Magenta Orb Grid Background */}

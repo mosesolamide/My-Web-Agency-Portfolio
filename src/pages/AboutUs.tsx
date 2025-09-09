@@ -1,11 +1,11 @@
-import type { JSX } from "react"
+
 import { motion } from "motion/react"
 import { useLocation } from "react-router"
 import SectionHead from "../component/SectionHead"
 import Stack from "../component/Stack"
 import { FaTrophy, FaUsers, FaClock, FaBullseye, FaEye } from "react-icons/fa"
 
-export default function AboutUs(): JSX.Element {
+export default function AboutUs(){
   const location = useLocation()
   const path = location.pathname
   
@@ -53,7 +53,7 @@ export default function AboutUs(): JSX.Element {
       transition={{ duration: 0.5 }}
     >
       {/* Section Heading */}
-      <SectionHead text="About Us" />
+      <SectionHead text="About M.O WebDev" />
 
       {/* Intro Text */}
       <div className="mt-8 max-w-4xl text-center lg:text-left">
@@ -87,7 +87,7 @@ export default function AboutUs(): JSX.Element {
             key={idx}
             className="bg-[#020617] rounded-2xl p-6 text-center shadow-md border border-white/10 
                        hover:shadow-xl hover:scale-105 transition-all duration-300"
-            aria-label={feature.title}
+            aria-label={feature.desc}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.6 }}

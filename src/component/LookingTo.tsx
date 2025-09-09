@@ -1,13 +1,13 @@
-import type { JSX } from "react"
+
 import { motion } from "motion/react"
 import GetStarted from "./GetStarted"
 import { useLocation } from "react-router-dom"
 
-export default function LookingTo(): JSX.Element {
+export default function LookingTo() {
   const location = useLocation()
 
   return (
-    <motion.div
+    <motion.section
       key={location.pathname} // Add this line
       className="relative bg-gradient-to-r from-blue-900/50 via-slate-900/40 to-purple-900/50 
       border border-white/20 backdrop-blur-xl 
@@ -19,9 +19,9 @@ export default function LookingTo(): JSX.Element {
       viewport={{once: true, amount: 0.4}}
     >
       <div className="max-w-2xl">
-        <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
-          Want to create a Website?
-        </h3>
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white leading-tight">
+          Need any kind of website?
+        </h1>
         <p className="mt-4 text-lg sm:text-xl text-gray-300 leading-relaxed">
           Contact <span className="font-semibold text-blue-400">M.O WebDev</span> – a top web development company.  
           We build fast, modern, and scalable web applications tailored for your success.
@@ -31,6 +31,6 @@ export default function LookingTo(): JSX.Element {
       <div className="flex-shrink-0">
         <GetStarted text="Get Started →" path="/contact" />
       </div>
-    </motion.div>
+    </motion.section>
   )
 }

@@ -1,4 +1,4 @@
-import type { JSX } from "react"
+
 import { motion } from "motion/react"
 import type { Variants } from "motion/react"
 import SectionHead from "./SectionHead"
@@ -9,7 +9,7 @@ import HTML from "../assets/stack-img/html-5.svg"
 import Wordpress from "../assets/stack-img/wordpress.svg"
 import ReactLogo from "../assets/stack-img/react js.svg"
 
-export default function Stack(): JSX.Element {
+export default function Stack() {
   const stackArr = [
     { name: "JavaScript", img: Javascript },
     { name: "Tailwind", img: Tailwind },

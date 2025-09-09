@@ -1,4 +1,4 @@
-import type { JSX } from 'react'
+
 import { motion } from "motion/react"
 import { useState, useEffect } from 'react'
 import { NavLink } from 'react-router'
@@ -6,7 +6,7 @@ import { TiThMenuOutline } from "react-icons/ti"
 import { MdOutlineCancel } from "react-icons/md"
 import GetStarted from './GetStarted'
 
-export default function NavBar(): JSX.Element {
+export default function NavBar(){
   const [showMenu, setShowMenu] = useState<boolean>(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const tabletSize: boolean = windowWidth <= 768
@@ -39,7 +39,7 @@ export default function NavBar(): JSX.Element {
       >
         <div>
           {/* <h1 className="font-bold text-2xl">M.OWebDev</h1> */}
-          <img src="./mowebdev_logo.webp" alt="Moses website development logo" className='w-50 m-0' />
+          <img src="./mowebdev_logo.webp" alt="M.0 the best web developer in niger " className='w-50 m-0' />
         </div>
 
         {/* Menu */}

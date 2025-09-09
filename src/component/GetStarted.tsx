@@ -1,4 +1,4 @@
-import type { JSX } from "react"
+
 import { Link } from "react-router"
 
 type GetStartedProps = {
@@ -7,7 +7,7 @@ type GetStartedProps = {
   onClick?: () => void | false
 }
 
-export default function GetStarted({ text, path, onClick }: GetStartedProps): JSX.Element {
+export default function GetStarted({ text, path, onClick }: GetStartedProps) {
   return (
     <Link
       to={path}

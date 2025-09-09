@@ -1,4 +1,4 @@
-import type { JSX } from "react"
+
 import { motion } from "motion/react"
 import SectionHead from "../component/SectionHead"
 import Seo from "../assets/seo.svg"
@@ -6,7 +6,7 @@ import Web from "../assets/web.svg"
 import AppDevelopment from "../assets/app development.svg"
 import LogoDesign from "../assets/logo design.svg"
 
-export default function Services(): JSX.Element {
+export default function Services() {
   
   type WhatWeOffer = {
     service: string

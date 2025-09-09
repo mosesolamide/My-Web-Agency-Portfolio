@@ -1,10 +1,10 @@
-import type { JSX } from "react"
+
 import { useState } from "react"
 import { motion } from "motion/react"
 import SectionHead from "./SectionHead"
 import { useLocation } from "react-router"
 
-export default function Faq(): JSX.Element {
+export default function Faq(){
   const [opened, setOpened] = useState<number | null>(null)
   const location = useLocation()
 

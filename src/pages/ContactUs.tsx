@@ -1,12 +1,12 @@
-import { useEffect, useState, type JSX } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "motion/react"
 import { useForm, ValidationError } from '@formspree/react'
 import { useLocation } from "react-router-dom"
 import SectionHead from "../component/SectionHead"
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaEnvelopeOpen } from "react-icons/fa"
 
-export default function ContactUs(): JSX.Element {
-  const [state, handleSubmit] = useForm("xrbazdkj")
+export default function ContactUs(){
+  const [state, handleSubmit] = useForm("mgvlpaqp")
   const [showMessage, setShowMessage] = useState(false)
   const location = useLocation()
 
@@ -43,7 +43,7 @@ export default function ContactUs(): JSX.Element {
       icons: <FaEnvelopeOpen size={30} className="text-red-500" />,
       text: "Email Support",
       p: "Get detailed responses via email",
-      to: "mailto:olamidemoses132@gmail.com",
+      to: "mailto:contact@mowebdev.com.ng",
       aText: "SEND MAIL"
     }
   ]
@@ -149,7 +149,7 @@ export default function ContactUs(): JSX.Element {
           <h2 className="text-2xl font-semibold mb-4 text-white">Contact Information</h2>
           <ul className="space-y-3">
             <li className="flex items-center gap-4 text-gray-300">
-              <FaEnvelope className="text-red-500" /> olamidemoses132@gmail.com
+              <FaEnvelope className="text-red-500" /> contact@mowebdev.com.ng
             </li>
             <li className="flex items-center gap-4 text-gray-300">
               <FaPhoneAlt className="text-red-500" /> 08167893167

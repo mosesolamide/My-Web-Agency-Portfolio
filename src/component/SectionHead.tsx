@@ -1,7 +1,7 @@
-import type { JSX } from "react"
+
 import { motion } from "motion/react"
 
-export default function SectionHead({text}:{text:string}):JSX.Element{
+export default function SectionHead({text}:{text:string}){
     return(
       <motion.h1 
         className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium 
