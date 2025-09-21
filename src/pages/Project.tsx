@@ -11,7 +11,7 @@ export default function Project() {
   const project = [
     {
       name: "Candle Leaf",
-      url: "https://candle-leaf.pxxl.live/",
+      url: "https://candle-leaf.pxxl.xyz/",
       image: CandleLeaf
     },
     {
