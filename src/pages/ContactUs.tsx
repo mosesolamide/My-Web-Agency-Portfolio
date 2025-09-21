@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { motion } from "motion/react"
 import { useForm, ValidationError } from '@formspree/react'
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router"
 import SectionHead from "../component/SectionHead"
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaEnvelopeOpen } from "react-icons/fa"
 

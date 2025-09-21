@@ -1,7 +1,6 @@
-
 import { motion } from "motion/react"
 import GetStarted from "./GetStarted"
-import { useLocation } from "react-router-dom"
+import { useLocation } from "react-router"
 
 export default function LookingTo() {
   const location = useLocation()

@@ -68,7 +68,7 @@ export default function NavBar(){
             <NavLink
               to={item.to}
               onClick={() => tabletSize && setShowMenu(false)}   // 👈 closes menu on mobile
-              className={({ isActive }) =>
+              className={({ isActive }:{isActive: boolean}) =>
                 isActive
                   ? "bg-[#1C1F2F] text-purple-300 px-4 py-2 rounded-full"
                   : "hover:text-purple-300 transition-colors"
