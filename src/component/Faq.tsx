@@ -10,7 +10,7 @@ export default function Faq(){
 
   const faq = [
     {
-      question: "How long does it take to develop a website?",
+      question: "How long does it take to develop a website in nigeria?",
       responds: "The timeline depends on the size and complexity of the project. A simple website can take 1–2 weeks, while larger custom projects may take 4–8 weeks."
     },
     {
@@ -34,7 +34,7 @@ export default function Faq(){
       responds: "We use modern technologies such as React, Tailwind CSS, and other tools to deliver fast, secure, and scalable websites."
     },
     {
-      question: "How much does a website cost?",
+      question: "How much to build a website in nigeria?",
       responds: "The cost varies depending on your project requirements. We'll provide a clear, customized quote after understanding your needs."
     }
   ]

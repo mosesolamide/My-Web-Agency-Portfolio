@@ -1,5 +1,5 @@
-
 import { motion } from "motion/react"
+import { Helmet } from "react-helmet-async"
 import SectionHead from "../component/SectionHead"
 import Seo from "../assets/seo.svg"
 import Web from "../assets/web.svg"
@@ -60,6 +60,16 @@ export default function Services() {
 
   return (
     <section className="mt-20 flex flex-col justify-center items-center">
+      {/* ✅ SEO Helmet */}
+      <Helmet>
+        <title>Our Services | M.O WebDev</title>
+        <meta
+          name="description"
+          content="Explore M.O WebDev services including Website Development, SEO Optimization, Logo & Branding, and App Development tailored to grow your business online."
+        />
+        <meta name="keywords" content="Web Development, SEO, Logo Design, App Development, Nigeria Web Agency" />
+      </Helmet>
+
       <SectionHead text="Our Services" />
       <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
         {whatWeOffer.map(({ id, description, service, available, img }) => (

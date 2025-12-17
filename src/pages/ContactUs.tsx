@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react"
+import { Helmet } from "react-helmet-async"
 import { motion } from "motion/react"
-import { useForm, ValidationError } from '@formspree/react'
+import { useForm, ValidationError } from "@formspree/react"
 import { useLocation } from "react-router"
 import SectionHead from "../component/SectionHead"
 import { FaPhoneAlt, FaEnvelope, FaWhatsapp, FaEnvelopeOpen } from "react-icons/fa"
 
-export default function ContactUs(){
+export default function ContactUs() {
   const [state, handleSubmit] = useForm("mgvlpaqp")
   const [showMessage, setShowMessage] = useState(false)
   const location = useLocation()
@@ -50,35 +51,49 @@ export default function ContactUs(){
 
   return (
     <section className="flex flex-col items-center" key={location.pathname}>
+      {/* ✅ Helmet SEO tags */}
+      <Helmet>
+        <title>Contact Us | M.O WebDev - Best Web Developer in Nigeria</title>
+        <meta
+          name="description"
+          content="Contact M.O WebDev - a professional web developer in Nigeria. Get in touch for modern responsive websites, SEO optimization, and web design services."
+        />
+        <meta
+          name="keywords"
+          content="web developer in Nigeria, best web developer, website design Nigeria, SEO web design, M.O WebDev contact"
+        />
+        <meta name="author" content="M.O WebDev" />
+        <link rel="canonical" href="https://mowebdev.com.ng/contact" />
+      </Helmet>
+
       <SectionHead text="Get in Touch" />
-      <motion.p 
+      <motion.p
         className="my-6 text-center max-w-xl leading-relaxed text-gray-300"
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{duration: .8, delay: .5}}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
       >
-        Contact <span className="font-semibold text-red-500">M.O WebDev</span> - best Web Developer in Nigeria via email, call or book a consultation. We typically reply within 24hrs.
+        Contact <span className="font-semibold text-red-500">M.O WebDev</span> – the best Web Developer in Nigeria via email, call or book a consultation. We typically reply within 24hrs.
       </motion.p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 md:grid-rows-2 gap-6 mt-4 w-full max-w-6xl">
-        
         {/* FORM */}
-        <motion.form 
-          onSubmit={handleSubmit} 
+        <motion.form
+          onSubmit={handleSubmit}
           className="rounded-2xl bg-white shadow-lg text-blue-950 py-8 px-6 space-y-6 md:row-span-2"
-          initial={{opacity: 0, x: -50}}
-          whileInView={{opacity: 1, x: 0}}
-          viewport={{once: true, amount: 0.5}}
-          transition={{type:"tween",duration: 0.8, ease: "easeOut"}}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ type: "tween", duration: 0.8, ease: "easeOut" }}
         >
           {/* Success Message */}
           {showMessage && (
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               className="fixed top-6 left-1/2 -translate-x-1/2 w-fit p-4 text-green-800 bg-green-100 border border-green-300 rounded-lg shadow-lg z-50"
             >
-              ✅ Thank you! Your message has been sent successfully we will get back to you soon.
+              ✅ Thank you! Your message has been sent successfully. We will get back to you soon.
             </motion.div>
           )}
 
@@ -136,15 +151,15 @@ export default function ContactUs(){
             Send Message
           </button>
         </motion.form>
-        
+
         {/* CONTACT INFO */}
-        <motion.div 
+        <motion.div
           className="bg-[#020617] flex flex-col items-center justify-center rounded-2xl
           border border-white/10 p-6"
-          initial={{opacity: 0, x: 50}}
-          whileInView={{opacity: 1, x: 0}}
-          viewport={{once: true, amount: 0.5}}
-          transition={{duration: 0.8, ease: "easeOut", delay: 0.2}}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
         >
           <h2 className="text-2xl font-semibold mb-4 text-white">Contact Information</h2>
           <ul className="space-y-3">
@@ -158,16 +173,16 @@ export default function ContactUs(){
         </motion.div>
 
         {/* QUICK CONTACT CARDS */}
-        <motion.div 
+        <motion.div
           className="flex flex-col md:flex-row gap-4 md:col-span-1"
-          initial={{opacity: 0, x: 50}}
-          whileInView={{opacity: 1, x: 0}}
-          viewport={{once: true, amount: 0.5}}
-          transition={{duration: 0.8, ease: "easeOut", delay: 0.4}}
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
         >
           {contactInfo.map(({ icons, text, p, to, aText }, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="flex flex-col gap-2 items-center justify-center bg-[#020617] rounded-2xl border-white/10 border p-6 flex-1"
               whileHover={{ y: -5 }}
               transition={{ duration: 0.2 }}
@@ -175,9 +190,9 @@ export default function ContactUs(){
               {icons}
               <h3 className="text-lg font-medium text-white">{text}</h3>
               <span className="text-sm text-gray-300 text-center">{p}</span>
-              <a 
-                href={to} 
-                aria-label={`Link to ${text}`} 
+              <a
+                href={to}
+                aria-label={`Link to ${text}`}
                 className="bg-red-500 hover:bg-red-600 transition-all py-2 px-4 rounded-sm mt-2 text-white text-sm font-medium"
                 target="_blank"
                 rel="noopener noreferrer"
