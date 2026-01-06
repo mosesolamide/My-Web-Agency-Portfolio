@@ -8,6 +8,9 @@ import CandleLeaf from "../assets/PROJECT-IMG/candle-leaf.webp"
 import Furniture from "../assets/PROJECT-IMG/Furniture.webp"
 import Hexashop from "../assets/PROJECT-IMG/Hexashop.webp"
 import Glamz from "../assets/PROJECT-IMG/Glamz.webp"
+import CampusEats from "../assets/PROJECT-IMG/campus-eats.png"
+import Mosesignature from "../assets/PROJECT-IMG/mosesignature-store.png"
+
 
 export default function Project() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null)
@@ -40,8 +43,14 @@ export default function Project() {
     {
       name: "CampusEats",
       url: "https://campuseats1.netlify.app/",
-      image: Furniture,
-      description: "A ."
+      image: CampusEats,
+      description: "A food delivery website for university student"
+    },
+    {
+      name: "Mose' Signature Store",
+      url: "https://mosesignature.store/",
+      image: Mosesignature,
+      description: "A fashion store that sells wristwatches, cloth, Perfumes, Men Glass"
     }
   ]
 
@@ -91,7 +100,7 @@ export default function Project() {
               alt={`Product image of ${item.name}`}
               loading="lazy"
               className={`w-full h-full object-cover object-top transition-transform duration-[2000ms] ease-linear
-              ${activeIndex === index ? "-translate-y-[70%]" : "group-hover:-translate-y-[70%]"}`}
+              ${activeIndex === index ? "-translate-y-[70%]" : "group-hover:-translate-y-[40%]"}`}
               onClick={() =>
                 setActiveIndex(activeIndex === index ? null : index)
               }
